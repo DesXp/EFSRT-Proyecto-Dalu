@@ -63,6 +63,54 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', actualizarNavActiva);
     actualizarNavActiva(); // Ejecutar al cargar la página
 
+    // --- Filtro de Galería ---
+    const botonesFiltro = document.querySelectorAll('.filtro-btn');
+    const itemsGaleria = document.querySelectorAll('.galeria-item');
+    const galeriaGrid = document.querySelector('.galeria-grid');
+
+    botonesFiltro.forEach(boton => {
+        boton.addEventListener('click', () => {
+            // Remover clase activa de todos los botones
+            botonesFiltro.forEach(btn => btn.classList.remove('active'));
+            // Agregar clase activa al botón clickeado
+            boton.classList.add('active');
+
+            const filtro = boton.getAttribute('data-filter');
+
+            // Ocultar todos los items primero
+            itemsGaleria.forEach(item => {
+                item.style.display = 'none';
+                item.style.opacity = '0';
+                item.classList.remove('visible');
+            });
+
+            // Mostrar items filtrados con animación
+            setTimeout(() => {
+                let itemsVisibles = 0;
+                itemsGaleria.forEach(item => {
+                    if (filtro === 'todos' || item.getAttribute('data-category') === filtro) {
+                        item.style.display = 'block';
+                        item.style.opacity = '1';
+                        item.classList.add('visible');
+                        itemsVisibles++;
+                    }
+                });
+
+                // Ajustar el grid layout basado en la cantidad de items visibles
+                if (itemsVisibles <= 2) {
+                    galeriaGrid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(350px, 1fr))';
+                    galeriaGrid.style.justifyContent = 'center';
+                } else if (itemsVisibles <= 4) {
+                    galeriaGrid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(300px, 1fr))';
+                    galeriaGrid.style.justifyContent = 'center';
+                } else {
+                    galeriaGrid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(280px, 1fr))';
+                    galeriaGrid.style.justifyContent = 'start';
+                }
+            }, 150);
+        });
+    });
+
     // --- Lógica del Carrusel de Imágenes ---
     const diapositivas = document.querySelector('.carrusel-diapositivas');
     const totalDiapositivas = document.querySelectorAll('.diapositiva').length;
@@ -84,6 +132,38 @@ document.addEventListener('DOMContentLoaded', () => {
     btnAnterior.addEventListener('click', () => {
         indiceActual = (indiceActual - 1 + totalDiapositivas) % totalDiapositivas;
         mostrarDiapositiva(indiceActual);
+    });
+
+    // --- Filtros de Galería ---
+    const filtroBtns = document.querySelectorAll('.filtro-btn');
+    const galeriaItems = document.querySelectorAll('.galeria-item');
+
+    filtroBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remover clase active de todos los botones
+            filtroBtns.forEach(b => b.classList.remove('active'));
+            // Agregar clase active al botón clickeado
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            galeriaItems.forEach(item => {
+                if (filterValue === 'todos' || item.getAttribute('data-category') === filterValue) {
+                    item.style.display = 'block';
+                    // Agregar animación de entrada
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
     });
 
     // --- Envío del Formulario de Contacto ---

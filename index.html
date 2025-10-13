@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DALU Comunicaciones SAC - Expertos en Telecomunicaciones</title>
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <link rel="shortcut icon" type="image/png" href="./assets/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +54,7 @@
         <section id="portada" class="portada">
             <!-- La imagen de fondo se aplica vía CSS -->
             <div class="contenedor">
-                <h1>Conectando el Futuro de las <span style="color: #00d4ff;">Telecomunicaciones</span></h1>
+                <h1>Conectando el Futuro de las <span style="color: #00d4ff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Telecomunicaciones</span></h1>
                 <p>Somos DALU Comunicaciones SAC, especialistas en infraestructura de fibra óptica, redes 5G, internet hogar y sistemas de seguridad.</p>
                 <div class="portada-cta-grupo">
                     <a href="#servicios" class="btn btn-primario">Nuestros Servicios</a>
@@ -70,28 +72,28 @@
                 </div>
                 <div class="servicios-grid">
                     <div class="tarjeta-servicio-imagen animar-al-revelar">
-                        <div class="tarjeta-servicio-imagen-fondo" style="background-image: url('https://placehold.co/600x400/3b82f6/white?text=Fibra+Óptica');"></div>
+                        <div class="tarjeta-servicio-imagen-fondo" style="background-image: url('./assets/images/Contruccion de planta externa.jpeg');"></div>
                         <div class="tarjeta-servicio-imagen-contenido">
                             <h3>Construcción de Planta Externa de Fibra Óptica</h3>
                             <p>Diseño y construcción de redes de fibra óptica robustas y escalables.</p>
                         </div>
                     </div>
                     <div class="tarjeta-servicio-imagen animar-al-revelar" style="transition-delay: 100ms;">
-                        <div class="tarjeta-servicio-imagen-fondo" style="background-image: url('https://placehold.co/600x400/10b981/white?text=Internet+Hogar');"></div>
+                        <div class="tarjeta-servicio-imagen-fondo" style="background-image: url('./assets/images/Instalación de internet hogar (1).jpeg');"></div>
                         <div class="tarjeta-servicio-imagen-contenido">
                             <h3>Instalación de Internet Hogar</h3>
                             <p>Conexión de alta velocidad directamente en los hogares.</p>
                         </div>
                     </div>
                     <div class="tarjeta-servicio-imagen animar-al-revelar" style="transition-delay: 200ms;">
-                        <div class="tarjeta-servicio-imagen-fondo" style="background-image: url('https://placehold.co/600x400/8b5cf6/white?text=Red+Móvil+5G');"></div>
+                        <div class="tarjeta-servicio-imagen-fondo" style="background-image: url('./assets/images/Contruccion de red móvil 5G.jpeg');"></div>
                         <div class="tarjeta-servicio-imagen-contenido">
                             <h3>Construcción de Red Móvil 5G</h3>
                             <p>Despliegue de infraestructura para la nueva generación de redes móviles.</p>
                         </div>
                     </div>
                     <div class="tarjeta-servicio-imagen animar-al-revelar" style="transition-delay: 300ms;">
-                        <div class="tarjeta-servicio-imagen-fondo" style="background-image: url('https://placehold.co/600x400/ef4444/white?text=Seguridad');"></div>
+                        <div class="tarjeta-servicio-imagen-fondo" style="background-image: url('./assets/images/Instalación de internet hogar (2).jpeg');"></div>
                         <div class="tarjeta-servicio-imagen-contenido">
                             <h3>Instalación de Cámaras de Seguridad</h3>
                             <p>Implementación de sistemas de videovigilancia avanzados.</p>
@@ -145,21 +147,79 @@
             </div>
         </section>
 
-        <!-- Sección de Galería / Carrusel -->
+        <!-- Sección de Galería / Grid de Proyectos -->
         <section id="galeria" class="seccion">
             <div class="contenedor">
                 <div class="titulo-seccion animar-al-revelar">
                     <h2 class="subtitulo-seccion">Galería de Proyectos</h2>
                     <p class="titulo-principal-seccion">Nuestro Trabajo en Acción</p>
                 </div>
-                <div class="carrusel-contenedor animar-al-revelar">
-                    <div class="carrusel-diapositivas">
-                        <img src="https://placehold.co/1200x600/3b82f6/ffffff?text=Proyecto+Fibra+Óptica" alt="Proyecto 1" class="diapositiva">
-                        <img src="https://placehold.co/1200x600/10b981/ffffff?text=Instalación+5G" alt="Proyecto 2" class="diapositiva">
-                        <img src="https://placehold.co/1200x600/ef4444/ffffff?text=Sistema+de+Seguridad" alt="Proyecto 3" class="diapositiva">
+                <!-- Filtros de Categoría -->
+                <div class="galeria-filtros animar-al-revelar">
+                    <button class="filtro-btn active" data-filter="todos">Todos</button>
+                    <button class="filtro-btn" data-filter="fibra">Construcción de Planta Externa de Fibra Óptica</button>
+                    <button class="filtro-btn" data-filter="hogar">Instalación de Internet Hogar</button>
+                    <button class="filtro-btn" data-filter="5g">Construcción de Red Móvil 5G</button>
+                    <button class="filtro-btn" data-filter="camaras">Instalación de Cámaras de Seguridad</button>
+                </div>
+
+                <div class="galeria-grid animar-al-revelar">
+                    <div class="galeria-item" data-category="fibra">
+                        <img src="assets/images/Contruccion de planta externa.jpeg" alt="Construcción de Planta Externa de Fibra Óptica" class="galeria-imagen">
+                        <div class="galeria-overlay">
+                            <h3>Construcción de Planta Externa de Fibra Óptica</h3>
+                            <p>Infraestructura de telecomunicaciones avanzada</p>
+                        </div>
                     </div>
-                    <button class="btn-carrusel prev" id="btn-anterior"><i class="fas fa-chevron-left"></i></button>
-                    <button class="btn-carrusel next" id="btn-siguiente"><i class="fas fa-chevron-right"></i></button>
+                    <div class="galeria-item" data-category="hogar">
+                        <img src="assets/images/Instalación de internet hogar (1).jpeg" alt="Instalación de Internet Hogar" class="galeria-imagen">
+                        <div class="galeria-overlay">
+                            <h3>Instalación de Internet Hogar</h3>
+                            <p>Conectividad de alta velocidad para hogares</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item" data-category="5g">
+                        <img src="assets/images/Contruccion de red móvil 5G.jpeg" alt="Construcción de Red Móvil 5G" class="galeria-imagen">
+                        <div class="galeria-overlay">
+                            <h3>Construcción de Red Móvil 5G</h3>
+                            <p>Infraestructura para la nueva generación móvil</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item" data-category="camaras">
+                        <img src="https://placehold.co/400x600/8b5cf6/white?text=Instalación+de+Cámaras+de+Seguridad" alt="Instalación de Cámaras de Seguridad" class="galeria-imagen">
+                        <div class="galeria-overlay">
+                            <h3>Instalación de Cámaras de Seguridad</h3>
+                            <p>Sistemas de videovigilancia avanzados</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item" data-category="fibra">
+                        <img src="https://placehold.co/400x600/3b82f6/white?text=Red+de+Fibra+Óptica" alt="Red de Fibra Óptica" class="galeria-imagen">
+                        <div class="galeria-overlay">
+                            <h3>Red de Fibra Óptica</h3>
+                            <p>Conexiones de alta capacidad y velocidad</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item" data-category="hogar">
+                        <img src="assets/images/Instalación de internet hogar (3).jpeg" alt="Proyecto de Telecomunicaciones" class="galeria-imagen">
+                        <div class="galeria-overlay">
+                            <h3>Instalación de Internet Hogar</h3>
+                            <p>Soluciones integrales de conectividad</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item" data-category="5g">
+                        <img src="https://placehold.co/400x600/10b981/white?text=Antenas+5G" alt="Antenas 5G" class="galeria-imagen">
+                        <div class="galeria-overlay">
+                            <h3>Antenas 5G</h3>
+                            <p>Despliegue de tecnología móvil de última generación</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item" data-category="camaras">
+                        <img src="https://placehold.co/400x600/ef4444/white?text=Sistema+de+Vigilancia" alt="Sistema de Vigilancia" class="galeria-imagen">
+                        <div class="galeria-overlay">
+                            <h3>Sistema de Vigilancia</h3>
+                            <p>Monitoreo continuo y seguridad avanzada</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
