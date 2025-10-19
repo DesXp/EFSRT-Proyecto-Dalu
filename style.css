@@ -1,4 +1,4 @@
-/* Variables y Reseteo Básico */
+
 :root {
     --color-primario: #2563eb;
     --color-primario-oscuro: #1d4ed8;
@@ -40,7 +40,6 @@ body {
     padding-right: 1.5rem;
 }
 
-/* Encabezado */
 .encabezado {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
@@ -102,7 +101,6 @@ body {
     color: var(--color-primario);
 }
 
-/* Indicador de navegación activa */
 .navegacion-escritorio a.activo,
 #menu-movil a.activo {
     color: var(--color-primario);
@@ -183,7 +181,7 @@ body {
     text-align: center;
 }
 
-/* Secciones Generales */
+
 .seccion {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -218,7 +216,7 @@ body {
     margin-right: auto;
 }
 
-/* Sección Portada */
+
 .portada {
     position: relative;
     padding-top: 8rem;
@@ -290,7 +288,6 @@ body {
     background-color: var(--color-borde);
 }
 
-/* Sección Servicios */
 #servicios {
     background-color: var(--color-blanco);
 }
@@ -359,7 +356,6 @@ body {
     line-height: 1.5;
 }
 
-/* Sección Socio Destacado */
 #socio {
     background-color: var(--color-fondo);
 }
@@ -402,7 +398,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Sección Nuestros Valores */
 #nuestros-valores {
     background-color: var(--color-blanco);
 }
@@ -435,7 +430,6 @@ body {
     color: var(--color-texto-secundario);
 }
 
-/* Sección Galería / Carrusel */
 #galeria {
     background-color: var(--color-fondo);
 }
@@ -487,7 +481,6 @@ body {
     right: 1rem;
 }
 
-/* Sección Sobre Nosotros */
 #nosotros {
     background-color: var(--color-blanco);
 }
@@ -525,7 +518,6 @@ body {
     margin-right: 0.75rem;
 }
 
-/* Sección Contacto */
 #contacto {
     background-color: var(--color-fondo);
 }
@@ -618,7 +610,6 @@ body {
     width: 100%;
 }
 
-/* Pie de Página */
 .pie-de-pagina {
     background-color: var(--color-texto-principal);
     color: var(--color-blanco);
@@ -677,7 +668,6 @@ body {
     color: #6b7280;
 }
 
-/* Notificación Toast */
 .notificacion {
     position: fixed;
     bottom: 1.25rem;
@@ -696,7 +686,7 @@ body {
     transform: translateX(0);
 }
 
-/* Animación de Scroll */
+
 .animar-al-revelar {
     opacity: 0;
     transform: translateY(30px);
@@ -708,7 +698,6 @@ body {
     transform: translateY(0);
 }
 
-/* Galería de Proyectos */
 .galeria-filtros {
     display: flex;
     justify-content: center;
@@ -820,7 +809,6 @@ body {
     opacity: 0.9;
 }
 
-/* Estilos Responsivos */
 @media (min-width: 768px) {
     .navegacion-escritorio {
         display: flex;
@@ -896,7 +884,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
      .nosotros-contenido-titulo {
-        margin-top: -3rem; /* Alinea mejor el título */
+        margin-top: -3rem;
     }
 }
 
